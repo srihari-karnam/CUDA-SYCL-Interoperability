@@ -88,9 +88,6 @@ int main() {
     /*
     DPCT1007:4: Migration of cusparseSpMV is not supported.
     */
-
-    // SYCL Interop
-    cudaStream_t nativeStream = ih.get_native_queue<sycl::backend::ext_oneapi_cuda>();
     cudaStreamCreate(&handle);
     cusparseSetStream(handle, stream);
 
